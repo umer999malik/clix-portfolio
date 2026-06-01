@@ -1,3 +1,3 @@
 # CLIX DESIGNER Portfolio
 
-Professional YouTube Thumbnail Designer Portfolio.
+Black and white aesthetic YouTube thumbnail portfolio with hover sketch-to-real effect.
