@@ -570,3 +570,21 @@ footer {
     transform: rotate(90deg);
   }
 }
+/* Center Portfolio & Services Headers */
+
+#work .section-head,
+#services .section-head {
+  display: block !important;
+  text-align: center;
+}
+
+#work .section-head h2,
+#services .section-head h2 {
+  margin-top: 10px;
+}
+
+#work .section-head p:last-child,
+#services .section-head p:last-child {
+  max-width: 700px;
+  margin: 15px auto 0;
+}
