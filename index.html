@@ -67,54 +67,107 @@
 </section>
 
     <section id="work" class="section">
-      <div class="section-head reveal center-head">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Thumbnail Work</h2>
-        <p>Click any thumbnail to preview it fullscreen.</p>
-      </div>
-
-      <div class="gallery">
-        <div class="thumb ab-thumb">
-    <div class="ab-buttons">
-        <button onclick="switchThumb(this,'thumb1-a.jpg')">A</button>
-        <button onclick="switchThumb(this,'thumb1-b.jpg')">B</button>
-    </div>
-
-    <img src="thumb1-a.jpg" alt="">
-</div>
-        <article class="thumb"><img src="thumb2.jpg" alt=""></article>
-        <div class="thumb ab-thumb">
-    <div class="ab-buttons">
-        <button onclick="switchThumb(this,'thumb3-a.jpg')">A</button>
-        <button onclick="switchThumb(this,'thumb3-b.jpg')">B</button>
-    </div>
-
-    <img src="thumb3-a.jpg" alt="">
-</div>
-        <article class="thumb"><img src="thumb4.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb5.png" alt=""></article>
-        <article class="thumb"><img src="thumb7.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb9.png" alt=""></article>
-        <article class="thumb"><img src="thumb10.png" alt=""></article>
-        <article class="thumb"><img src="thumb11.png" alt=""></article>
-        <article class="thumb"><img src="thumb12.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb13.png" alt=""></article>
-        <article class="thumb"><img src="thumb14.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb15.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb16.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb17.jpg" alt=""></article>
-        <article class="thumb"><img src="thumb18.jpg" alt=""></article>
-        <div class="thumb ab-thumb">
-  <div class="ab-buttons">
-    <button onclick="switchThumb(this,'thumb19-a.jpg')">A</button>
-    <button onclick="switchThumb(this,'thumb19-b.jpg')">B</button>
+  <div class="section-head reveal center-head">
+    <p class="eyebrow">Portfolio</p>
+    <h2>Thumbnail Work</h2>
+    <p>Click any thumbnail to preview it fullscreen.</p>
   </div>
 
-  <img src="thumb19-a.jpg" alt="">
-</div>
-        <article class="thumb"><img src="thumb20.jpg" alt=""></article>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="gaming">Gaming</button>
+    <button class="filter-btn" data-filter="education">Education</button>
+    <button class="filter-btn" data-filter="business">Business</button>
+    <button class="filter-btn" data-filter="challenge">Challenge</button>
+    <button class="filter-btn" data-filter="tech">Tech</button>
+  </div>
+
+  <div class="gallery">
+    <div class="thumb ab-thumb" data-category="education">
+      <div class="ab-buttons">
+        <button onclick="switchThumb(this,'thumb1-a.jpg')">A</button>
+        <button onclick="switchThumb(this,'thumb1-b.jpg')">B</button>
       </div>
-    </section>
+      <img src="thumb1-a.jpg" alt="">
+    </div>
+
+    <article class="thumb" data-category="challenge">
+      <img src="thumb2.jpg" alt="">
+    </article>
+
+    <div class="thumb ab-thumb" data-category="education">
+      <div class="ab-buttons">
+        <button onclick="switchThumb(this,'thumb3-a.jpg')">A</button>
+        <button onclick="switchThumb(this,'thumb3-b.jpg')">B</button>
+      </div>
+      <img src="thumb3-a.jpg" alt="">
+    </div>
+
+    <article class="thumb" data-category="tech">
+      <img src="thumb4.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="challenge">
+      <img src="thumb5.png" alt="">
+    </article>
+
+    <article class="thumb" data-category="business">
+      <img src="thumb7.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="gaming">
+      <img src="thumb9.png" alt="">
+    </article>
+
+    <article class="thumb" data-category="tech">
+      <img src="thumb10.png" alt="">
+    </article>
+
+    <article class="thumb" data-category="challenge">
+      <img src="thumb11.png" alt="">
+    </article>
+
+    <article class="thumb" data-category="business">
+      <img src="thumb12.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="education">
+      <img src="thumb13.png" alt="">
+    </article>
+
+    <article class="thumb" data-category="lifestyle">
+      <img src="thumb14.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="lifestyle">
+      <img src="thumb15.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="challenge">
+      <img src="thumb16.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="education">
+      <img src="thumb17.jpg" alt="">
+    </article>
+
+    <article class="thumb" data-category="action">
+      <img src="thumb18.jpg" alt="">
+    </article>
+
+    <div class="thumb ab-thumb" data-category="education">
+      <div class="ab-buttons">
+        <button onclick="switchThumb(this,'thumb19-a.jpg')">A</button>
+        <button onclick="switchThumb(this,'thumb19-b.jpg')">B</button>
+      </div>
+      <img src="thumb19-a.jpg" alt="">
+    </div>
+
+    <article class="thumb" data-category="action">
+      <img src="thumb20.jpg" alt="">
+    </article>
+  </div>
+</section>
 <section class="section process" id="process">
   <div class="process-head reveal">
     <p>MY PROCESS</p>
