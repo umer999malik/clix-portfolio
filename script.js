@@ -81,17 +81,18 @@ filterBtns.forEach(btn => {
     });
 
     if (filter === "all") {
-      portfolioGallery.classList.remove("expanded");
-      viewMoreBtn.textContent = "View More";
-      viewMoreBtn.style.display = "block";
-      galleryFade.style.display = "block";
-    } else {
-      portfolioGallery.classList.add("expanded");
-      viewMoreBtn.style.display = "none";
-      galleryFade.style.display = "none";
-    }
-  });
-});
+  portfolioGallery.classList.remove("expanded");
+  portfolioGallery.classList.add("gallery-limited");
+
+  viewMoreBtn.textContent = "View More";
+  viewMoreBtn.style.display = "block";
+  galleryFade.style.display = "block";
+} else {
+  portfolioGallery.classList.add("expanded");
+
+  viewMoreBtn.style.display = "none";
+  galleryFade.style.display = "none";
+}
 
 viewMoreBtn.addEventListener("click", () => {
   portfolioGallery.classList.toggle("expanded");
