@@ -59,3 +59,29 @@ function switchThumb(btn, imageSrc) {
   const img = card.querySelector('img');
   img.src = imageSrc;
 }
+const filterBtns = document.querySelectorAll('.filter-btn');
+const thumbs = document.querySelectorAll('.thumb');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    thumbs.forEach(thumb => {
+
+      if(filter === 'all'){
+        thumb.style.display = 'block';
+      } else {
+        thumb.style.display =
+          thumb.dataset.category === filter
+          ? 'block'
+          : 'none';
+      }
+
+    });
+
+  });
+});
