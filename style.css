@@ -117,3 +117,21 @@ footer{position:relative;z-index:2;padding:30px 6vw;color:#888;border-top:1px so
   .hero-actions{display:grid}
   .thumb{border-radius:16px}
 }
+.portfolio-card {
+  background: rgba(255,255,255,.04);
+}
+
+.thumb-info {
+  padding: 12px 4px 4px;
+}
+
+.thumb-info h3 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.thumb-info p {
+  color: #aaa;
+  font-size: 13px;
+}
