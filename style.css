@@ -133,19 +133,19 @@ footer{position:relative;z-index:2;padding:30px 6vw;color:#888;border-top:1px so
 }
 
 .video-info h3 {
-  font-size: 20px;
-  line-height: 1.25;
-  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 4px;
   color: #fff;
 }
 
 .video-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+  margin-top: 0;
 }
-
 .channel {
   color: #fff;
   font-weight: 800;
@@ -170,9 +170,8 @@ footer{position:relative;z-index:2;padding:30px 6vw;color:#888;border-top:1px so
   margin-bottom: 0;
 }
 
-.video-info {
-  padding-top: 0;
-  margin-top: 0;
+.video-info h3 {
+  margin-bottom: 2px;
 }
 
 .video-info h3 {
