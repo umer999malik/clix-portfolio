@@ -59,46 +59,48 @@ function switchThumb(btn, imageSrc) {
   const img = card.querySelector('img');
   img.src = imageSrc;
 }
-const filterBtns = document.querySelectorAll('.filter-btn');
-const thumbs = document.querySelectorAll('.thumb');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-
-    thumbs.forEach(thumb => {
-
-      if(filter === 'all'){
-        thumb.style.display = 'block';
-      } else {
-        thumb.style.display =
-          thumb.dataset.category === filter
-          ? 'block'
-          : 'none';
-      }
-
-    });
-
-  });
-});
+const filterBtns = document.querySelectorAll(".filter-btn");
+const thumbs = document.querySelectorAll(".thumb");
 const viewMoreBtn = document.getElementById("viewMoreBtn");
 const portfolioGallery = document.getElementById("portfolioGallery");
 const galleryFade = document.getElementById("galleryFade");
 
-if (viewMoreBtn && portfolioGallery && galleryFade) {
-  viewMoreBtn.addEventListener("click", () => {
-    portfolioGallery.classList.toggle("expanded");
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-    if (portfolioGallery.classList.contains("expanded")) {
-      viewMoreBtn.textContent = "Show Less";
-      galleryFade.style.display = "none";
-    } else {
+    const filter = btn.dataset.filter;
+
+    thumbs.forEach(thumb => {
+      if (filter === "all" || thumb.dataset.category === filter) {
+        thumb.style.display = "block";
+      } else {
+        thumb.style.display = "none";
+      }
+    });
+
+    if (filter === "all") {
+      portfolioGallery.classList.remove("expanded");
       viewMoreBtn.textContent = "View More";
+      viewMoreBtn.style.display = "block";
       galleryFade.style.display = "block";
+    } else {
+      portfolioGallery.classList.add("expanded");
+      viewMoreBtn.style.display = "none";
+      galleryFade.style.display = "none";
     }
   });
-}
+});
+
+viewMoreBtn.addEventListener("click", () => {
+  portfolioGallery.classList.toggle("expanded");
+
+  if (portfolioGallery.classList.contains("expanded")) {
+    viewMoreBtn.textContent = "Show Less";
+    galleryFade.style.display = "none";
+  } else {
+    viewMoreBtn.textContent = "View More";
+    galleryFade.style.display = "block";
+  }
+});
