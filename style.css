@@ -658,11 +658,69 @@ footer {
   z-index: 3;
 }
 
+.portfolio-wrapper {
+  position: relative;
+}
+
+.gallery-limited {
+  max-height: 980px;
+  overflow: hidden;
+}
+
+.gallery-limited.expanded {
+  max-height: none;
+}
+
+.gallery-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 55px;
+  height: 260px;
+  background: linear-gradient(
+    to bottom,
+    rgba(5,5,5,0) 0%,
+    rgba(5,5,5,0.75) 55%,
+    #050505 100%
+  );
+  pointer-events: none;
+  z-index: 4;
+}
+
+.portfolio-wrapper {
+  position: relative;
+}
+
+.gallery-limited {
+  max-height: 980px;
+  overflow: hidden;
+}
+
+.gallery-limited.expanded {
+  max-height: none;
+}
+
+.gallery-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 55px;
+  height: 260px;
+  background: linear-gradient(
+    to bottom,
+    rgba(5,5,5,0) 0%,
+    rgba(5,5,5,0.75) 55%,
+    #050505 100%
+  );
+  pointer-events: none;
+  z-index: 4;
+}
+
 .view-more-btn {
   position: relative;
-  z-index: 5;
+  z-index: 6;
   display: block;
-  margin: -40px auto 0;
+  margin: -85px auto 90px;
   background: #fff;
   color: #000;
   border: none;
