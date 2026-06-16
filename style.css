@@ -242,3 +242,27 @@ footer{position:relative;z-index:2;padding:30px 6vw;color:#888;border-top:1px so
   font-size:32px;
   color:#fff;
 }
+@media(max-width:950px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-copy{
+    text-align:center;
+    margin:0 auto;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .hero-thumbs{
+    height:420px;
+    min-width:0;
+  }
+
+  .hero-thumb{
+    width:300px;
+  }
+}
