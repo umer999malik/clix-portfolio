@@ -333,3 +333,17 @@ footer{position:relative;z-index:2;padding:30px 6vw;color:#888;border-top:1px so
 .faq-item.active .faq-answer{
   max-height:200px;
 }
+.faq .section-head{
+  display:block !important;
+  text-align:center !important;
+}
+
+.faq .section-head .eyebrow{
+  margin-bottom:10px;
+}
+
+.faq .section-head h2{
+  font-size:clamp(46px, 6vw, 86px);
+  text-align:center;
+  margin:0 auto;
+}
