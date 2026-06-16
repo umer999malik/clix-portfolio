@@ -58,13 +58,14 @@ body{font-family:Inter,system-ui,sans-serif;background:#050505;color:#f5f5f5;ove
 .hero-thumbs{
   position:relative;
   height:520px;
-  min-width:680px;
-  margin-right:-160px;
+  min-width:650px;
+  margin-right:0;
+  margin-left:20px;
 }
 
 .hero-thumb{
   position:absolute;
-  width:320px;
+  width:300px;
   aspect-ratio:16/9;
   object-fit:cover;
 
@@ -80,22 +81,25 @@ body{font-family:Inter,system-ui,sans-serif;background:#050505;color:#f5f5f5;ove
 }
 
 .hero-thumb.t1{
-  top:40px;
-  left:40px;
-  transform:translateX(600px) rotate(-13deg);
+  top:70px;
+  left:80px;
+  transform:translateX(600px) rotate(-11deg);
+  animation-delay:.1s;
 }
 
 .hero-thumb.t2{
-  top:220px;
+  top:235px;
   left:110px;
-  transform:translateX(600px) rotate(-13deg);
+  transform:translateX(600px) rotate(-11deg);
+  animation-delay:.25s;
 }
 
 .hero-thumb.t3{
-  top:130px;
-  left:360px;
-  transform:translateX(600px) rotate(-13deg);
-}
+  top:150px;
+  left:330px;
+  transform:translateX(600px) rotate(-11deg);
+  animation-delay:.4s;
+} 
 
 .hero-thumb.t4{
   display:none;
