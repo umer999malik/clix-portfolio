@@ -58,41 +58,43 @@ body{font-family:Inter,system-ui,sans-serif;background:#050505;color:#f5f5f5;ove
 .hero-thumbs{
   position:relative;
   height:520px;
-  min-width:760px;
+  min-width:680px;
   margin-right:-160px;
 }
 
 .hero-thumb{
   position:absolute;
-  width:430px;
+  width:320px;
   aspect-ratio:16/9;
   object-fit:cover;
-  border-radius:34px;
-  border:3px solid rgba(255,255,255,.9);
-  box-shadow:0 35px 90px rgba(0,0,0,.75);
+
+  border:none; /* removed white stroke */
+
+  border-radius:28px;
+
+  box-shadow:0 25px 70px rgba(0,0,0,.55);
+
   opacity:0;
+
   animation:heroThumbIn .9s ease forwards;
 }
 
 .hero-thumb.t1{
-  top:20px;
-  left:10px;
+  top:40px;
+  left:40px;
   transform:translateX(600px) rotate(-13deg);
-  animation-delay:.1s;
 }
 
 .hero-thumb.t2{
-  top:250px;
+  top:220px;
   left:110px;
   transform:translateX(600px) rotate(-13deg);
-  animation-delay:.25s;
 }
 
 .hero-thumb.t3{
-  top:175px;
-  left:440px;
+  top:130px;
+  left:360px;
   transform:translateX(600px) rotate(-13deg);
-  animation-delay:.4s;
 }
 
 .hero-thumb.t4{
