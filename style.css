@@ -12,13 +12,119 @@ body{font-family:Inter,system-ui,sans-serif;background:#050505;color:#f5f5f5;ove
 .nav nav a{color:#cfcfcf;text-decoration:none;font-weight:800;font-size:14px}
 .nav nav a:hover{color:white}
 
-.hero{position:relative;z-index:2;min-height:86vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 6vw 70px}
-.hero-copy{width:100%;max-width:1150px;margin:0 auto}
-.eyebrow{text-transform:uppercase;letter-spacing:6px;color:#aaa;font-size:13px;font-weight:900;margin-bottom:18px}
-.hero h1{font-family:Anton,sans-serif;font-size:clamp(52px,8vw,118px);line-height:1.05;letter-spacing:1px;max-width:1150px;margin:0 auto}
-.subtext{margin:28px auto 0;color:#cfcfcf;font-size:18px;line-height:1.7;max-width:680px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;justify-content:center}
+.hero{
+  position:relative;
+  z-index:2;
+  min-height:86vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+  padding:90px 6vw 70px;
+  overflow:hidden;
+}
 
+.hero-copy{
+  max-width:720px;
+  text-align:left;
+  position:relative;
+  z-index:3;
+}
+
+.hero h1{
+  font-family:Anton,sans-serif;
+  font-size:clamp(54px,6.5vw,104px);
+  line-height:.95;
+  letter-spacing:1px;
+  margin:0;
+}
+
+.subtext{
+  margin:28px 0 0;
+  color:#cfcfcf;
+  font-size:18px;
+  line-height:1.7;
+  max-width:620px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:34px;
+  justify-content:flex-start;
+}
+
+.hero-thumbs{
+  position:relative;
+  height:560px;
+  min-width:520px;
+}
+
+.hero-thumb{
+  position:absolute;
+  width:360px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 30px 100px rgba(0,0,0,.65);
+  animation:slideInThumb .9s ease forwards;
+  opacity:0;
+}
+
+.hero-thumb.t1{
+  top:20px;
+  right:120px;
+  transform:translateX(500px) rotate(-10deg);
+  animation-delay:.1s;
+}
+
+.hero-thumb.t2{
+  top:165px;
+  right:-20px;
+  transform:translateX(500px) rotate(8deg);
+  animation-delay:.25s;
+}
+
+.hero-thumb.t3{
+  top:305px;
+  right:95px;
+  transform:translateX(500px) rotate(-6deg);
+  animation-delay:.4s;
+}
+
+.hero-thumb.t4{
+  top:430px;
+  right:-70px;
+  transform:translateX(500px) rotate(10deg);
+  animation-delay:.55s;
+  opacity:.85;
+}
+
+@keyframes slideInThumb{
+  to{
+    opacity:1;
+  }
+}
+
+.hero-thumb.t1{animation-name:thumbOne}
+.hero-thumb.t2{animation-name:thumbTwo}
+.hero-thumb.t3{animation-name:thumbThree}
+.hero-thumb.t4{animation-name:thumbFour}
+
+@keyframes thumbOne{
+  to{opacity:1;transform:translateX(0) rotate(-10deg)}
+}
+@keyframes thumbTwo{
+  to{opacity:1;transform:translateX(0) rotate(8deg)}
+}
+@keyframes thumbThree{
+  to{opacity:1;transform:translateX(0) rotate(-6deg)}
+}
+@keyframes thumbFour{
+  to{opacity:.85;transform:translateX(0) rotate(10deg)}
+}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:999px;font-weight:900;text-decoration:none;transition:.25s ease}
 .btn.primary{background:#fff;color:#000}
 .btn.primary:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(255,255,255,.16)}
